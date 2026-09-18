@@ -1,231 +1,270 @@
 <!DOCTYPE html>
-<html>
+
+<html lang="en">
+
 <head>
-    <title>My Personal Profile</title> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Profile</title>
+
+```
 <style>
-    
-body {
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #F8C8DC, #FFFFFF, #87CEEB);
-    margin: 0;
-    padding: 40px 20px;
-    color: #333;
-}
+    * {
+        box-sizing: border-box;
+    }
 
-.profile {
-    max-width: 850px;
-    margin: auto;
-    background: #FFFFFF;
-    padding: 35px;
-    border-radius: 25px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.20);
-}
+    body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #1e1b4b, #7e22ce, #db2777);
+        margin: 0;
+        padding: 40px 20px;
+        color: #333;
+    }
 
-header {
-    text-align: center;
-    background: #87CEEB;
-    color: white;
-    padding: 30px;
-    border-radius: 20px;
-    margin-bottom: 25px;
-}
+    .profile {
+        max-width: 850px;
+        margin: auto;
+        background: #ffffff;
+        padding: 35px;
+        border-radius: 25px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+    }
 
-h1 {
-    margin: 0;
-    font-size: 35px;
-}
+    header {
+        text-align: center;
+        background: #4c1d95;
+        color: white;
+        padding: 30px;
+        border-radius: 20px;
+        margin-bottom: 25px;
+    }
 
-header p {
-    margin-top: 10px;
-    color: #ffffff;
-}
+    h1 {
+        margin: 0;
+        font-size: 35px;
+    }
 
-h2 {
-    color: #D46A92;
-    border-left: 5px solid #87CEEB;
-    padding-left: 10px;
-    margin-top: 30px;
-}
+    header p {
+        margin-top: 10px;
+        color: #e9d5ff;
+    }
 
-p {
-    line-height: 1.7;
-}
+    h2 {
+        color: #7e22ce;
+        border-left: 5px solid #db2777;
+        padding-left: 10px;
+        margin-top: 30px;
+    }
 
-ul,
-ol {
-    line-height: 2;
-}
+    p {
+        line-height: 1.7;
+    }
 
-li {
-    margin-bottom: 5px;
-}
+    ul,
+    ol {
+        line-height: 2;
+    }
 
-.photo {
-    text-align: center;
-    margin: 25px 0;
-}
+    li {
+        margin-bottom: 5px;
+    }
 
-.photo img {
-    width: 180px;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 6px solid #F8C8DC;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.20);
-}
+    /* Profile Photo */
+    .photo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 30px 0;
+    }
 
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 15px;
-    overflow: hidden;
-    border-radius: 10px;
-}
+    .photo img {
+        width: 180px;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 6px solid #c026d3;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+        display: block;
+    }
 
-th {
-    background: #87CEEB;
-    color: white;
-    padding: 12px;
-}
+    /* Class Schedule */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 15px;
+        overflow: hidden;
+        border-radius: 10px;
+    }
 
-td {
-    padding: 12px;
-    text-align: center;
-    border: 1px solid #F8C8DC;
-}
+    th {
+        background: #7e22ce;
+        color: #ffffff;
+        padding: 12px;
+    }
 
-tr:nth-child(even) {
-    background: #FFF5F8;
-}
+    td {
+        padding: 12px;
+        text-align: center;
+        border: 1px solid #ddd;
+    }
 
-tr:hover {
-    background: #E8F7FC;
-}
+    tr:nth-child(even) {
+        background: #f5f3ff;
+    }
 
-.contact {
-    background: #F8C8DC;
-    padding: 20px;
-    border-radius: 15px;
-    text-align: center;
-    margin-top: 25px;
-}
+    tr:hover {
+        background: #fce7f3;
+    }
 
-a {
-    color: #4FA3C7;
-    font-weight: bold;
-    text-decoration: none;
-}
+    /* Contact */
+    .contact {
+        background: #f3e8ff;
+        padding: 20px;
+        border-radius: 15px;
+        text-align: center;
+        margin-top: 25px;
+    }
 
-a:hover {
-    text-decoration: underline;
-}
+    .contact h2 {
+        margin-top: 0;
+    }
 
-footer {
-    text-align: center;
-    margin-top: 25px;
-    color: #777;
-    font-size: 14px;
-}
-    </style>
+    a {
+        color: #db2777;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    /* Footer */
+    footer {
+        text-align: center;
+        margin-top: 25px;
+        color: #777;
+        font-size: 14px;
+    }
+
+    /* Mobile */
+    @media (max-width: 600px) {
+        body {
+            padding: 20px 10px;
+        }
+
+        .profile {
+            padding: 20px;
+            border-radius: 18px;
+        }
+
+        header {
+            padding: 25px 15px;
+        }
+
+        h1 {
+            font-size: 28px;
+        }
+
+        h2 {
+            font-size: 21px;
+        }
+
+        .photo img {
+            width: 150px;
+            height: 150px;
+        }
+
+        table {
+            font-size: 14px;
+        }
+
+        th,
+        td {
+            padding: 9px;
+        }
+    }
+</style>
+```
+
 </head>
 
 <body>
 
-    <!-- My Personal Profile Page -->
+```
+<!-- My Personal Profile Page -->
 
-    <div class="profile">
+<div class="profile">
 
-        <header>
-            <h1>Jannah Ghail Go. Nieva</h1>
-            <p>BSIT Student | Future IT Professional</p>
-        </header>
+    <header>
+        <h1>Jannah Ghail Go. Nieva</h1>
+        <p>BSIT Student | Future IT Professional</p>
+    </header>
 
-        <h2>About Me</h2>
+    <h2>About Me</h2>
 
-        <p>
-            Hello! My name is Ghail. I am a student who is interested in learning new things, improving my skills, and exploring technology
-        </p>
+    <p>
+        Hello! My name is Ghail. I am a student who is interested
+        in learning new things, improving my skills, and exploring technology.
+    </p>
 
-        <p>
-            I am interested in technology and creating websites.
-            I want to improve my skills in web development and cybersecurity and use what i learn.
-        </p>
-      
-      <div class="photo">
-    <img src="52d6cb29-619c-40bf-87e8-99b1ea9632ac.jpg" alt="My Profile Photo">
-</div>
-    
+    <p>
+        I am interested in technology and creating websites.
+        I want to improve my skills in web development and cybersecurity
+        and use what I learn.
+    </p>
 
-        <h2>My Skills and Hobbies</h2>
+    <div class="photo">
+        <img src="52d6cb29-619c-40bf-87e8-99b1ea9632ac.jpg"
+             alt="My Profile Photo">
+    </div>
 
-        <ul>
-            <li>Web Development</li>
-            <li>Learning new things</li>
-            <li>Programming</li>
-            <li>Using Technology</li>
-            <li>Watching movies and series</li>
-        </ul>
+    <h2>My Skills and Hobbies</h2>
 
-        <h2>My Top 3 Goals This Term</h2>
+    <ul>
+        <li>Web Development</li>
+        <li>Learning New Things</li>
+        <li>Programming</li>
+        <li>Using Technology</li>
+        <li>Watching Movies and Series</li>
+    </ul>
 
-        <ol>
-            <li>Improve my coding skills</li>
-            <li>Learn more about web development</li>
-            <li>Finish all my activities</li>
-        </ol>
+    <h2>My Top 3 Goals This Term</h2>
 
-        <h2>My Weekly Class Schedule</h2>
+    <ol>
+        <li>Improve my coding skills</li>
+        <li>Learn more about web development</li>
+        <li>Finish all my activities</li>
+    </ol>
 
-        <table>
-            <tr>
-                <th>Day</th>
-                <th>Subject</th>
-            </tr>
+    <h2>My Weekly Class Schedule</h2>
 
-            <tr>
-                <td>Monday</td>
-                <td>Networking</td>
-            </tr>
+    <table>
+        <tr>
+            <th>Day</th>
+            <th>Subject</th>
+        </tr>
 
-            <tr>
-                <td>Tuesday</td>
-                <td>Database Management</td>
-            </tr>
+        <tr>
+            <td>Monday</td>
+            <td>Networking</td>
+        </tr>
 
-            <tr>
-                <td>Wednesday</td>
-                <td>Web Development</td>
-            </tr>
+        <tr>
+            <td>Tuesday</td>
+            <td>Database Management</td>
+        </tr>
 
-            <tr>
-                <td>Thursday</td>
-                <td>Programming</td>
-            </tr>
+        <tr>
+            <td>Wednesday</td>
+            <td>Web Development</td>
+        </tr>
 
-            <tr>
-                <td>Friday</td>
-                <td>Information Technology</td>
-            </tr>
-        </table>
+        <tr>
+            <td>Thursday</td>
+            <td>Programming</td>
+        </tr>
 
-        <div class="contact">
-
-            <h2>Contact Me</h2>
-
-            <p>
-                You can email me at:
-                <a href="mailto:jgnieva@example.com">
-                   jgnieva0510@gmail.com
-                </a>
-            </p>
-
-        </div>
-
-        <footer>
-            © 2026 Jannah Ghail Nieva
-</footer>
-
-</div>
-
-</body>
-</html>
+        <tr>
+            <td>Friday</td>
+```
